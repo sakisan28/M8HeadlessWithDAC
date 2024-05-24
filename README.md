@@ -33,7 +33,7 @@ alsaloop -P hw:2,0 -C hw:1,0 ...
   
 alsaloop works pass stream '-C' to '-P' devices.  
 
-Ordinaly, device IDs are:  
+Ordinary, device IDs are:  
 0: Game console internal audio  
 1: M8 Headless  
 2: USB audio device  
