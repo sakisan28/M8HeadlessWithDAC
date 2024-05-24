@@ -7,19 +7,29 @@
 
 sed -i "/^idle_ms=/s/=.*/=25/" ~/.local/share/m8c/config.ini
 
-#m8_path=ports/M8
+m8_orgpath=ports/M8
 m8_path=1M8ARK
-roms2_path=/roms2/$m8_path
-roms_path=/roms/$m8_path
+roms2_path=/roms2
+roms_path=/roms
 
 if [ -e "$roms2_path" ]; then
   cd $roms2_path
+  if [ -e "$m8_path" ]; then
+    cd $m8_path
+  else
+    cd $m8_orgpath
+  fi
 else
   cd $roms_path
+  if [ -e "$m8_path" ]; then
+    cd $m8_path
+  else
+    cd $m8_orgpath
+  fi
 fi
 
 # set cpu governor to powersave to minimize audio "crackles"
-echo "powersave" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+#echo "powersave" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 
 # alsaloop_wait will run in background and try to create the loopback 
 # if it can't be created before m8c runs. Useful for wait_for_device=true. 
