@@ -25,6 +25,7 @@ echo "powersave" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governo
 # if it can't be created before m8c runs. Useful for wait_for_device=true. 
 #./alsaloop_wait &
 alsaloop -P hw:2,0 -C hw:1,0 -t 200000 -A 5 --rate 44100 --sync=0 -T -1 -d
+sleep 1
 ./_m8c/m8c
 
 pkill alsaloop
