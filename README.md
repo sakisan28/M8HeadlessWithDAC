@@ -23,7 +23,7 @@ These IDs depend device connectiong order...
 
 The device id '7' is set by ARKOS, it may same as device '2'.  
 
-M8 Headless device has device name 'M8', you can write the line:  
+M8 Headless has device name 'M8', you can write the line:  
 alsaloop -P hw:2,0 -C hw:M8,0 ...  
   
   
