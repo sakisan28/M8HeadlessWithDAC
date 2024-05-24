@@ -19,7 +19,7 @@ Ordinany, device IDs are:
 1: M8 Headless  
 2: USB audio device  
 
-These IDs depend device connectiong order...  
+These IDs depend device connecting order...  
 
 The device id '7' is set by ARKOS, it may same as device '2'.  
 
