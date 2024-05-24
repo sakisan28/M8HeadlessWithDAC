@@ -12,25 +12,21 @@ sed -i "/^idle_ms=/s/=.*/=25/" ~/.local/share/m8c/config.ini
 
 m8_orgpath=ports/M8
 m8_path=1M8ARK
-#roms2_path=/roms2/$m8_path
-#roms_path=/roms/$m8_path
 roms2_path=/roms2
 roms_path=/roms
+path1=$roms_path/$m8_orgpath
+path2=$roms2_path/$m8_orgpath
+path3=$roms_path/$m8_path
+path4=$roms2_path/$m8_path
 
-if [ -e "$roms2_path" ]; then
-  cd $roms2_path
-  if [ -e "$m8_path" ]; then
-    cd $m8_path
-  else
-    cd $m8_orgpath
-  fi
-else
-  cd $roms_path
-  if [ -e "$m8_path" ]; then
-    cd $m8_path
-  else
-    cd $m8_orgpath
-  fi
+if [ -e "$path1" ]; then
+  cd $path1
+elif [ -e "$path2" ]; then
+  cd $path2
+elif [ -e "$path3" ]; then
+  cd $path3
+elif [ -e "$path4" ]; then
+  cd $path4
 fi
 
 # set cpu governor to powersave to minimize audio "crackles"
