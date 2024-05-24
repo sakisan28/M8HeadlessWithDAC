@@ -6,6 +6,23 @@ M8 Headless with game console (RG351, R36S etc...) output to USBDAC.
 
 for ARKOS.
 
+  
+# Usage  
+Copy M8USBDAC.sh to your m8c directory (one of /roms/ports/M8, /roms/1M8ARK, /roms2/ports/M8, /roms2/1M8ARK).  
+  
+|File|Description|
+|---|---|
+|M8USBDAC.sh|output to USBDAC|  
+|M8USBDAC_rev.sh|output to USBDAC, detection order reverse version.|  
+|M8USBDAC_by_name.sh|If your USBDAC device named 'CODEC', this version is mostly stable.|  
+|M8_SPKOUT_USBIN.sh|output to game console speaker and "audio in" from USB audio interface.|  
+|M8_USBINOUT.sh|for audio interface in/out.|  
+|showdevices.sh|show devide ID (push button to exit).|  
+  
+---
+  
+
+**Detail**  
 In script, you can see following line:  
 alsaloop -P hw:2,0 -C hw:1,0 ...  
   
@@ -27,9 +44,3 @@ M8 Headless has device name 'M8', you can write the line:
 alsaloop -P hw:2,0 -C hw:M8,0 ...  
   
   
-|File|Description|
-|---|---|
-|M8USBDAC.sh|output to USBDAC|  
-|M8_SPKOUT_USBIN.sh|output to game console speaker and "audio in" from USB audio interface.|  
-|M8_USBINOUT.sh|for audio interface in/out.|  
-|showdevices.sh|show devide ID (push button to exit).|  
