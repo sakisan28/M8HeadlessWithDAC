@@ -12,7 +12,7 @@ alsaloop -P hw:2,0 -C hw:1,0 ...
 '-P hw:2,0' means playback device set to device ID 2.  
 '-C hw:1,0' means capture device set to device ID 1.  
   
-alsaloop works pass stream '-C' to '-P' devides.  
+alsaloop works pass stream '-C' to '-P' devices.  
 
 Ordinany, device IDs are:  
 0: Game console internal audio  
