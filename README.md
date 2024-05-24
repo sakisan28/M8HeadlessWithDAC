@@ -1,11 +1,10 @@
 # M8HeadlessWithDAC
-M8 Headless with game console (RG351, R36S etc...) output to USBDAC.
+Dirtywave M8 Headless with game console (RG351, R36S etc...) output to USBDAC.
 
 **for "1M8ARK" archive on YouTube**
 [https://www.youtube.com/watch?v=tt95ZG6W8hM](https://www.youtube.com/watch?v=tt95ZG6W8hM)
 
-for ARKOS.
-
+for ARKOS.  
   
 # Usage  
 Copy M8USBDAC.sh to your m8c directory (one of /roms/ports/M8, /roms/1M8ARK, /roms2/ports/M8, /roms2/1M8ARK).  
