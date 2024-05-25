@@ -45,4 +45,10 @@ The device id '7' is set by ARKOS, it may same as device '2'.
 M8 Headless has device name 'M8', you can write the line:  
 alsaloop -P hw:2,0 -C hw:M8,0 ...  
   
-  
+---
+# Links
+1M8ARK on YouTube [https://www.youtube.com/watch?v=tt95ZG6W8hM](https://www.youtube.com/watch?v=tt95ZG6W8hM)  
+rg351_m8c [https://github.com/jasonporritt/rg351_m8c](https://github.com/jasonporritt/rg351_m8c)  
+m8c [https://github.com/laamaa/m8c/](https://github.com/laamaa/m8c/)  
+M8 Headless Firmware [https://github.com/Dirtywave/M8HeadlessFirmware](https://github.com/Dirtywave/M8HeadlessFirmware)  
+Dirtywave [https://dirtywave.com/](https://dirtywave.com/)  
