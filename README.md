@@ -44,7 +44,20 @@ The device id '7' is set by ARKOS, it may same as device '2'.
 
 M8 Headless has device name 'M8', you can write the line:  
 alsaloop -P hw:2,0 -C hw:M8,0 ...  
+
+---
+**Sample setting**  
+Internal speaker by device name  
+alsaloop -P hw:rockchiprk817co,0 -C hw:M8,0 ...  
   
+Use -B instead of -t  
+alsaloop ... -B 1024 -A5 --rate 44100 --sync=0 -T -1 -d  
+  
+Use --sync=1 for timing but sometime drop sample.  
+alsaloop ... -B 1024 -A5 --rate 44100 --sync=1 -T -1 -d  
+
+Copy wifitoggle.sh from /usr/local/bin.
+
 ---
 # Links
 1M8ARK on YouTube [https://www.youtube.com/watch?v=tt95ZG6W8hM](https://www.youtube.com/watch?v=tt95ZG6W8hM)  
