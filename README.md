@@ -49,12 +49,13 @@ alsaloop -P hw:2,0 -C hw:M8,0 ...
 **Sample setting**  
 Internal speaker by device name  
 alsaloop -P hw:rockchiprk817co,0 -C hw:M8,0 ...  
-  
-Use -B instead of -t  
-alsaloop ... -B 1024 -A5 --rate 44100 --sync=0 -T -1 -d  
-  
+    
 Use --sync=1 for timing but sometime drop sample.  
-alsaloop ... -B 1024 -A5 --rate 44100 --sync=1 -T -1 -d  
+alsaloop ... -t 200000 -A 5 --rate 44100 --sync=1 -T -1 -d  
+  
+If USB hardware default is not 44100, use plughw: instead of hw:  
+alsaloop -P plughw:MC101,0 -C hw:M8,0 -t 200000 --rate 44100 -A 5 -T -1 -d  
+  
 
 Copy wifitoggle.sh from /usr/local/bin.
 
