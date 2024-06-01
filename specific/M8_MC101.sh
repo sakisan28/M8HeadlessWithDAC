@@ -34,6 +34,7 @@ fi
 #./alsaloop_wait &
 #alsaloop -P hw:2,0 -C hw:1,0 -t 200000 -A 5 --rate 44100 --sync=0 -T -1 -d
 alsaloop -P plughw:MC101,0 -C hw:M8,0 -t 200000 --rate 44100 -A 5 -T -1 -d
+alsaloop -P hw:M8,0 -C plughw:MC101,0 -t 500000 --rate 44100 -f S16_LE -A 5 -T -1 -d
 sleep 1
 ./_m8c/m8c
 
