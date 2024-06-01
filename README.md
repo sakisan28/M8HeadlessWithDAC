@@ -16,6 +16,7 @@ Copy M8USBDAC.sh to your m8c directory (one of /roms/ports/M8, /roms/1M8ARK, /ro
 |M8USBDAC_by_name.sh|If your USBDAC device named 'CODEC', this version is mostly stable.|  
 |M8_SPKOUT_USBIN.sh|output to game console speaker and "audio in" from USB audio interface.|  
 |M8_USBINOUT.sh|for audio interface in/out.|  
+|M8RT.sh|for MIDI recording, low latency, noisy, unstable.|  
 |showdevices.sh|show device ID (push button to exit).|  
   
 Early, specific directory versions are marged main M8USBDAC.sh.  
