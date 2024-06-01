@@ -7,7 +7,7 @@ Dirtywave M8 Headless with game console (RG351, R36S etc...) scritps for use USB
 Tested on ARKOS.  
   
 # Usage  
-Copy M8USBDAC.sh to your m8c directory (one of /roms/ports/M8, /roms/1M8ARK, /roms2/ports/M8, /roms2/1M8ARK).  
+Copy M8_USBDAC.sh to your m8c directory (one of /roms/ports/M8, /roms/1M8ARK, /roms2/ports/M8, /roms2/1M8ARK).  
   
 |File|Description|
 |---|---|
