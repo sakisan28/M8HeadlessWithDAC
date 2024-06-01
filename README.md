@@ -22,6 +22,8 @@ Copy M8USBDAC.sh to your m8c directory (one of /roms/ports/M8, /roms/1M8ARK, /ro
 Early, specific directory versions are marged main M8USBDAC.sh.  
 Original 'power save' codes are commented out.  
 
+6/1/2024, Performance setting as default.  
+
 ---
   
 
@@ -57,9 +59,6 @@ alsaloop ... -t 200000 -A 5 --rate 44100 --sync=1 -T -1 -d
 If USB hardware default is not 44100, use plughw: instead of hw:  
 alsaloop -P plughw:MC101,0 -C hw:M8,0 -t 200000 --rate 44100 -A 5 -T -1 -d  
   
-
-Copy wifitoggle.sh from /usr/local/bin.
-
 ---
 # Links
 1M8ARK on YouTube [https://www.youtube.com/watch?v=tt95ZG6W8hM](https://www.youtube.com/watch?v=tt95ZG6W8hM)  
