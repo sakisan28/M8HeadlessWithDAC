@@ -25,6 +25,7 @@ mv tools/rctest.c tools/rctest.c.ORG
 cat header.tmp tools/rctest.c.ORG > tools/rctest.c
 mv tools/l2test.c tools/l2test.c.ORG
 cat header.tmp tools/l2test.c.ORG > tools/l2test.c
+rm header.tmp
 
 make
 
