@@ -31,4 +31,3 @@ make
 
 sudo make install-exec
 sudo cp /usr/bin/mpris-proxy /usr/lib/bluetooth
-echo 'SUccess!'
