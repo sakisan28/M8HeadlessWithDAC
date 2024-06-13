@@ -20,7 +20,7 @@ cd bluez-5.50
 
 ./configure --prefix=/usr --enable-midi --sbindir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var  --with-systemdsystemunitdir=/etc/systemd/system
 
-echo "#include <linux/sockios.h>" > header.tmp
+echo '#include <linux/sockios.h>' > header.tmp
 mv tools/rctest.c tools/rctest.c.ORG
 cat header.tmp tools/rctest.c.ORG > tools/rctest.c
 mv tools/l2test.c tools/l2test.c.ORG
@@ -31,3 +31,4 @@ make
 
 sudo make install-exec
 sudo cp /usr/bin/mpris-proxy /usr/lib/bluetooth
+echo 'SUccess!'
