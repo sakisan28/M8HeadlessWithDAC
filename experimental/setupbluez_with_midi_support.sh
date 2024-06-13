@@ -11,8 +11,8 @@
 sudo apt update
 sudo apt upgrade
 
-sudo apt reinstall -y build-essential linux-libc-dev libc6-dev libdbus-glib-1-dev
-sudo apt install -y git autotools-dev flex bison libglib2.0-dev libudev-dev libical-dev libreadline-dev python3-docutils libjson-c-dev libasound2-dev
+sudo apt reinstall build-essential linux-libc-dev libc6-dev libglib2.0-dev libdbus-glib-1-dev libdbus-1-dev
+sudo apt install git autotools-dev flex bison libudev-dev libical-dev libreadline-dev python3-docutils libjson-c-dev libasound2-dev
 
 wget https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.50.tar.xz
 tar xvf bluez-5.50.tar.xz
