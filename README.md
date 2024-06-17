@@ -60,6 +60,15 @@ If USB hardware default is not 44100, use plughw: instead of hw:
 alsaloop -P plughw:MC101,0 -C hw:M8,0 -t 200000 --rate 44100 -A 5 -T -1 -d  
   
 ---
+**Specific**  
+Roland MC101  
+Roland T8  
+Device named 'CODEC'  
+Device named 'Dock'  
+Device number 3 (for Powkiddy RGB30)  
+
+
+---
 # Links
 1M8ARK on YouTube [https://www.youtube.com/watch?v=tt95ZG6W8hM](https://www.youtube.com/watch?v=tt95ZG6W8hM)  
 rg351_m8c [https://github.com/jasonporritt/rg351_m8c](https://github.com/jasonporritt/rg351_m8c)  
