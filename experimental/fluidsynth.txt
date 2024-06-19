@@ -1,0 +1,9 @@
+start_fluidsynth.sh
+for ArkOS
+
+run start_fluidsynth.sh before M8 run.
+
+This script run fluidsynth with default GM set, and connect output to M8 in.
+On M8, use 'External' instrument to use fluidsynth.
+
+So, when you using fluidsynth, you can't use M8 audio in.
