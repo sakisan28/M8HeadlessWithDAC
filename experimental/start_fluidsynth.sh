@@ -9,5 +9,4 @@ sleep 2
 m8=$(aconnect -i -l | awk '/M8/{ print substr($2,1,length($2)-1);exit }')
 fluid=$(aconnect -o -l | awk '/FLUID/{ print substr($2,1,length($2)-1);exit }')
 
-echo "aconnect $fluid $m8"
 aconnect ${m8} ${fluid}
