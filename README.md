@@ -1,10 +1,10 @@
 # M8HeadlessWithDAC
-Dirtywave M8 Headless with game console (RG351, R36S etc...) scritps for use USB audio(aka DAC).
+Dirtywave M8 Headless with game console (RG351, R36S etc...) scripts for use USB audio(aka DAC).
 
 **for "1M8ARK" archive on YouTube**
 [https://www.youtube.com/watch?v=tt95ZG6W8hM](https://www.youtube.com/watch?v=tt95ZG6W8hM)
 
-Tested on ARKOS.  
+Tested on ArkOS.  
   
 # Usage  
 Copy M8_USBDAC.sh to your m8c directory (one of /roms/ports/M8, /roms/1M8ARK, /roms2/ports/M8, /roms2/1M8ARK).  
@@ -67,9 +67,14 @@ Device named 'CODEC'
 Device named 'Dock'  
 Device number 3 (for Powkiddy RGB30)  
 
+---
+*Experimental*  
+fluidsynth: start fluid synth and synth output to M8 in.  You can use GM synth on M8's 'EXTERNAL' instruments.   
+Bluez MIDI support: sample script for rebuild Bluez with MIDI support.  
 
 ---
 # Links
+ArkOS [https://github.com/christianhaitian/arkos/wiki](https://github.com/christianhaitian/arkos/wiki)  
 1M8ARK on YouTube [https://www.youtube.com/watch?v=tt95ZG6W8hM](https://www.youtube.com/watch?v=tt95ZG6W8hM)  
 rg351_m8c [https://github.com/jasonporritt/rg351_m8c](https://github.com/jasonporritt/rg351_m8c)  
 m8c [https://github.com/laamaa/m8c/](https://github.com/laamaa/m8c/)  
