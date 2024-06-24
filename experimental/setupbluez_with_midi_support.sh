@@ -1,9 +1,11 @@
 #!/usr/bin/bash
+#WARNING THIS IS EXPERIMENTAL SCRIPT.
+#You can build bluez, but it may not work...
+#You have to have knowledge of Linux application building.
+
 
 #ArkOS's bluez is not support midi.
 #This script replace bluetooth components.
-#WARNING THIS IS EXPERIMENTAL SCRIPT.
-#You have to have knowledge of Linux application building.
 #Usage: on menu bluetooth select connect new device midi device
 #check 'aconnect -l'
 #run 'midi_connect.sh' script
