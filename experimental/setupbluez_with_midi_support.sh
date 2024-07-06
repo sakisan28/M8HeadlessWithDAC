@@ -1,5 +1,7 @@
 #!/usr/bin/bash
+
 #WARNING THIS IS EXPERIMENTAL SCRIPT.
+#THIS SCRIPT INSTALL NORMAL VERSION OF BLUEZ, not bluez-alsa, SOME BLUETOOTH AUDIO FEATURES WILL BE DISABLED!!!
 #You can build bluez, but it may not work...
 #You have to have knowledge of Linux application building.
 
