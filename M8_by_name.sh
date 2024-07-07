@@ -28,7 +28,7 @@ fi
 
 # set cpu governor to powersave to minimize audio "crackles"
 #echo "powersave" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
-echo "performance" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+#echo "performance" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 
 # alsaloop_wait will run in background and try to create the loopback 
 # if it can't be created before m8c runs. Useful for wait_for_device=true. 

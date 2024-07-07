@@ -28,12 +28,12 @@ fi
 
 # set cpu governor to powersave to minimize audio "crackles"
 #echo "powersave" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
-echo "performance" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+#echo "performance" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 
 # alsaloop_wait will run in background and try to create the loopback 
 # if it can't be created before m8c runs. Useful for wait_for_device=true. 
 #./alsaloop_wait &
-alsaloop -P hw:rockchiprk817co,0 -C hw:M8,0 -t 20000 -A 5 --rate 44100 --sync=1 -T -1 -d
+alsaloop -P hw:rockchiprk817co,0 -C hw:M8,0 -t 16000 -A 5 --rate 44100 --sync=1 -T -1 -d
 sleep 1
 ./_m8c/m8c
 
