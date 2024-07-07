@@ -1,10 +1,10 @@
 #!/usr/bin/bash
 
-#WARNING THIS IS EXPERIMENTAL SCRIPT.
-#THIS SCRIPT INSTALL NORMAL VERSION OF BLUEZ, not bluez-alsa, SOME BLUETOOTH AUDIO FEATURES WILL BE DISABLED!!!
-#You can build bluez, but it may not work...
-#You have to have knowledge of Linux application building.
-
+echo 'WARNING THIS IS EXPERIMENTAL SCRIPT.'
+echo 'THIS SCRIPT INSTALL NORMAL VERSION OF BLUEZ, not bluez-alsa, SOME BLUETOOTH AUDIO FEATURES WILL BE DISABLED!!!'
+echo 'You can build bluez, but it may not work...'
+echo 'You have to have knowledge of Linux application building.'
+sleep 30
 
 #ArkOS's bluez is not support midi.
 #This script replace bluetooth components.
@@ -15,6 +15,11 @@
 sudo apt update
 sudo apt -y upgrade
 
+
+####################################################
+#FOLOWING INSTALL SCRIPT FOR DEV TOOLS IS VERY DIRTY
+#IF YOU ARE TRUE DEVELOPPER TRY https://github.com/christianhaitian/arkos/tree/main/Headers
+####################################################
 sudo apt -y reinstall build-essential linux-libc-dev libc6-dev libglib2.0-dev libdbus-glib-1-dev libdbus-1-dev libasound2-dev libudev-dev
 sudo apt -y install libical-dev libreadline-dev
 
