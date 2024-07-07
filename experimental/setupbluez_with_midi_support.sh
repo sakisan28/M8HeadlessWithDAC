@@ -1,10 +1,12 @@
 #!/usr/bin/bash
-
+echo ''
+echo ''
 echo 'WARNING THIS IS EXPERIMENTAL SCRIPT.'
 echo 'THIS SCRIPT REPLACE SYSTEM BLUEZ AS NORMAL VERSION OF BLUEZ 5.50 WITH MIDI SUPPORT.'
 echo 'NOT EXTENSIVELY TESTED.'
 echo 'You have to have knowledge of Linux application building.'
-sleep 30
+echo 'WAIT 60 SECONDS TO CONTINUE...'
+sleep 60
 
 #ArkOS's bluez is not support midi.
 #This script replace bluetooth components.
