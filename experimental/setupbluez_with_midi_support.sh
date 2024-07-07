@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 
 echo 'WARNING THIS IS EXPERIMENTAL SCRIPT.'
-echo 'THIS SCRIPT INSTALL NORMAL VERSION OF BLUEZ, not bluez-alsa, SOME BLUETOOTH AUDIO FEATURES WILL BE DISABLED!!!'
-echo 'You can build bluez, but it may not work...'
+echo 'THIS SCRIPT REPLACE SYSTEM BLUEZ AS NORMAL VERSION OF BLUEZ 5.50 WITH MIDI SUPPORT.'
+echo 'NOT EXTENSIVELY TESTED.'
 echo 'You have to have knowledge of Linux application building.'
 sleep 30
 
