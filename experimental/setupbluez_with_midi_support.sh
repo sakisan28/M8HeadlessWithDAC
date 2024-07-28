@@ -15,7 +15,7 @@ sleep 60
 #run 'midi_connect.sh' script
 
 sudo apt update
-sudo apt -y upgrade
+#sudo apt -y upgrade
 
 
 ####################################################
@@ -29,14 +29,7 @@ wget https://mirrors.edge.kernel.org/pub/linux/bluetooth/bluez-5.50.tar.xz
 tar xvf bluez-5.50.tar.xz
 cd bluez-5.50
 
-./configure --prefix=/usr --enable-midi --sbindir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var  --with-systemdsystemunitdir=/etc/systemd/system
-
-echo '#include <linux/sockios.h>' > header.tmp
-mv tools/rctest.c tools/rctest.c.ORG
-cat header.tmp tools/rctest.c.ORG > tools/rctest.c
-mv tools/l2test.c tools/l2test.c.ORG
-cat header.tmp tools/l2test.c.ORG > tools/l2test.c
-rm header.tmp
+./configure --prefix=/usr --enable-midi --disable-tools --disable-cups --disable-obex --disable-manpages --disable-debug  --sbindir=/usr/lib --libexecdir=/usr/lib --mandir=/usr/share/man --sysconfdir=/etc --localstatedir=/var  --with-systemdsystemunitdir=/etc/systemd/system
 
 make
 
