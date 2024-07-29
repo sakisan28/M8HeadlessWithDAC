@@ -36,5 +36,11 @@ Makefile の local_CFLAGS に -I/usr/include/SDL2 を追加。
 Add -I/usr/include/SDL2 on local_CFLAGS in Makefile.
 make
 
-これでボタンも普通に動く(RGB30で確認)
+m8c と gamecontrollerdb.txt を同じディレクトリーにコピー
+copy m8c and gamecontrollerdb.txt same directory.
+
+m8c を実行
+run m8c
+./m8c (or Emulationstation ports menu)
+
 終了時に libmali の警告が出るがとりあえずは問題ないようだ。
