@@ -15,7 +15,7 @@ https://github.com/christianhaitian/arkos/wiki/Building-packages-and-modules-on-
 
 
 libserialport を追加
-Add libserialpot
+Add libserialport
 
 sudo apt install libserialport-dev
 
