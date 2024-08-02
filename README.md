@@ -9,8 +9,6 @@ Or, If you wish build m8c from source, refer experimental/howto- text.
 Tested on ArkOS.  
 
 ROCKNIX , use M8_ROCKNIX.sh  
-You have to edit Teensy serial number in M8_ROCKNIX.sh  
-DirtyWave_M8_15208230 <- 15028230 is unique serial number. rewrite your Teensy number.  
    
   
 # Usage  
