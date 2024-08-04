@@ -10,7 +10,7 @@ Make sure it works properly then you can turn off or reset.
 Make sure the directory name matches your environment /roms2/ports/M8 
 
 ----
- <system>
+	<system>
 		<name>DirtywaveM8</name>
 		<fullname>DirtywaveM8</fullname>
 		<path>/roms2/ports/M8</path>
