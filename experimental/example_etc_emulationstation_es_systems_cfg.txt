@@ -1,0 +1,21 @@
+**WARNING**  
+If you make a mistake in the settings, it will not boot again.  
+and, this es_system.cfg file in ext4 partition (not FAT32/exFAT/NTFS), not so easy to fix.  
+  
+  
+Put this before "<system><name>options..." in /etc/emulationstation/es_systems.cfg  
+Reset EMULATIONSTATION  
+Make sure it works properly then you can turn off or reset.    
+
+Make sure the directory name matches your environment /roms2/ports/M8 
+
+----
+ <system>
+		<name>DirtywaveM8</name>
+		<fullname>DirtywaveM8</fullname>
+		<path>/roms2/ports/M8</path>
+		<extension>.sh .SH</extension>
+		<command>sudo chmod 666 /dev/tty1; sudo perfmax %GOVERNOR% %ROM%; nice -n -19 %ROM% 2>&1 > /dev/tty1; printf"\033c" >> /dev/tty1; sudo perfnorm</command>
+		<platform>DirtywaveM8</platform>
+		<theme>DirtywaveM8</theme>
+	</system>	
