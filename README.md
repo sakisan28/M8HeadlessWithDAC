@@ -7,7 +7,8 @@ Setup 1M8ARK m8c.
 Or, If you wish build m8c from source, refer experimental/howto- text.  
   
 Tested on ArkOS.  
-     
+
+Only M8_ROCKNIX.sh tested on ROCKNIX.  
   
 # Usage  
 Copy M8_USBDAC.sh to your m8c directory (one of /roms/ports/M8, /roms/1M8ARK, /roms2/ports/M8, /roms2/1M8ARK).  
