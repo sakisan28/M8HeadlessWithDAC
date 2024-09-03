@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-fluidsynth -s -i -a alsa -o audio.alsa.device=hw:M8,0 -m alsa_seq /usr/share/sounds/sf3/default-GM.sf3 &
+fluidsynth -s -i -g 1.0 -a alsa -o audio.alsa.device=hw:M8,0 -m alsa_seq /usr/share/sounds/sf3/default-GM.sf3 &
 #GeneralUser GS
 #fluidsynth -s -i -a alsa -o audio.alsa.device=hw:M8,0 -m alsa_seq /roms2/1M8ARK/'GeneralUser GS v1.471.sf2' &
 
