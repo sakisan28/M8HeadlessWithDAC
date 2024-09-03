@@ -1,6 +1,6 @@
 #/bin/bash
 
-cd /storage/roms/ports/M8
+cd $(dirname $0)
 
 #./alsaloop -P hw:rk817ext,0 -C hw:M8,0 -t 200000 -A 5 --rate 44100 --sync=0 -T -1 -d
 
