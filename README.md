@@ -1,9 +1,7 @@
 # M8HeadlessWithDAC
 Dirtywave M8 Headless with game console (RG351, R36S etc...) scripts for use USB audio(aka DAC).
 
-# Install
-**for "1M8ARK" archive on YouTube**
-[https://www.youtube.com/watch?v=tt95ZG6W8hM](https://www.youtube.com/watch?v=tt95ZG6W8hM)  
+# Install  
 *for M8 Version 4.0 on discord search '1M8ARK'*  
 https://github.com/miotislucifugis/m8c_arkOs_4.0
 Setup 1M8ARK m8c.  
