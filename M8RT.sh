@@ -1,28 +1,27 @@
 #!/bin/bash
 
-# Uncomment the following lines to disable wi-fi
-#sudo modprobe -r mt7601u
-#sudo sed -i '$ablacklist mt7601u' /etc/modprobe.d/blacklist.conf
-#printf "\n\n\n\e[32mWifi has been disabled.\n"
-
 sed -i "/^idle_ms=/s/=.*/=25/" ~/.local/share/m8c/config.ini
 
 cd $(dirname $0)
 
-# set cpu governor to powersave to minimize audio "crackles"
-#echo "powersave" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
-#echo "performance" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+aplay -l | grep 'rockchiprk817co'
 
-# alsaloop_wait will run in background and try to create the loopback 
-# if it can't be created before m8c runs. Useful for wait_for_device=true. 
-#./alsaloop_wait &
-alsaloop -P hw:rockchiprk817co,0 -C hw:M8,0 -t 16000 -A 5 --rate 44100 --sync=1 -T -1 -d
-sleep 1
-./_m8c/m8c
-
-pkill alsaloop
-
-# Uncomment the following lines to enable wi-fi
-#sudo modprobe -i mt7601u
-#sudo sed -i '/blacklist mt7601u/d' /etc/modprobe.d/blacklist.conf
-#printf "\n\n\n\e[32mWifi has been enabled.\n"
+if [ $? -eq 0 ]
+then
+#ArkOS
+    sudo nice --19 alsaloop -P hw:rockchiprk817co,0 -C hw:M8,0 -t 16000 -A 5 --rate 44100 --sync=1 -T -1 -d
+    sleep 1
+    ./_m8c/m8c
+    sudo pkill alsaloop
+else
+#ROCKNIX
+    M8=$(pactl list sources short 2>&1 | awk '/alsa_input\.usb-DirtyWave_M8/{print $1;exit}')
+    SPK=$(pactl list sinks short 2>&1 | awk '/alsa_output\._sys_devices_platform_.*HiFi__Headphones__sink/{print $1;exit}')
+    pactl set-default-source ${M8}
+    pactl set-default-sink ${SPK}
+    pactl load-module module-loopback source=${M8} sink=${SPK} latency_msec=16 format=s16le rate=44100 channels=2
+    sleep 2
+    pgrep pipewire | awk '{system("renice -n -19 " $1)}'
+    ./_m8c/m8c
+    pactl unload-module module-loopback
+fi
