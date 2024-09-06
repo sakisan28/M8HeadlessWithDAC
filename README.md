@@ -19,7 +19,7 @@ Connect Teensy and run 'M8'.
 |File|Description|
 |---|---|
 |M8.sh|standard M8 script.|  
-|M8RT.sh|for MIDI recording, low latency, noisy, unstable.|  
+|M8RT.sh|low latency realtime version, sometime glitchy|  
 |M8_USBDAC.sh|output to USBDAC|  
 |M8_SPKOUT_USBIN.sh|output to game console speaker and "audio in" from USB audio interface.|  
 |M8_USBINOUT.sh|for audio interface in/out.|  
