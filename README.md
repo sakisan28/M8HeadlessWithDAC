@@ -5,6 +5,7 @@ Dirtywave M8 Headless with game console (RG351, R36S etc...) scripts for use USB
 **for "1M8ARK" archive on YouTube**
 [https://www.youtube.com/watch?v=tt95ZG6W8hM](https://www.youtube.com/watch?v=tt95ZG6W8hM)  
 *for M8 Version 4.0 on discord search '1M8ARK'*  
+https://github.com/miotislucifugis/m8c_arkOs_4.0
 Setup 1M8ARK m8c.  
 Or, If you wish build m8c from source, refer experimental/howto- text.
   
