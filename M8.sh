@@ -13,10 +13,9 @@ cd $(dirname $0)
 #echo "powersave" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 #echo "performance" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 
-aplay -l | grep 'rockhiprk817co'
-ret = $?
+aplay -l | grep 'rockchiprk817co'
 
-if [ ret -eq 0]
+if [ $? -eq 0 ]
 then
 #ArkOS
     alsaloop -P hw:rockchiprk817co,0 -C hw:M8,0 -t 200000 -A 5 --rate 44100 --sync=1 -T -1 -d
@@ -34,7 +33,6 @@ else
     ./_m8c/m8c
     pactl unload-module module-loopback
 fi
-
 
 # Uncomment the following lines to enable wi-fi
 #sudo modprobe -i mt7601u
