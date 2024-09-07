@@ -1,31 +1,33 @@
 #!/bin/bash
 
-# Uncomment the following lines to disable wi-fi
-#sudo modprobe -r mt7601u
-#sudo sed -i '$ablacklist mt7601u' /etc/modprobe.d/blacklist.conf
-#printf "\n\n\n\e[32mWifi has been disabled.\n"
-
 sed -i "/^idle_ms=/s/=.*/=25/" ~/.local/share/m8c/config.ini
 
 cd $(dirname $0)
 
-# set cpu governor to powersave to minimize audio "crackles"
-#echo "powersave" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
-#echo "performance" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
+aplay -l | grep 'rockchiprk817co'
 
-# alsaloop_wait will run in background and try to create the loopback 
-# if it can't be created before m8c runs. Useful for wait_for_device=true. 
-#./alsaloop_wait &
-
-alsaloop -P hw:2,0 -C hw:M8,0 -t 200000 -A 5 --rate 44100 --sync=1 -T -1 -d
-alsaloop -P hw:M8,0 -C hw:2,0 -t 500000 -A 5 --rate 44100 --sync=1 -T -1 -d
-sleep 1
-
-./_m8c/m8c
-
-pkill alsaloop
-
-# Uncomment the following lines to enable wi-fi
-#sudo modprobe -i mt7601u
-#sudo sed -i '/blacklist mt7601u/d' /etc/modprobe.d/blacklist.conf
-#printf "\n\n\n\e[32mWifi has been enabled.\n"
+if [ $? -eq 0 ]
+then
+#ArkOS
+    USBOUT=$(aplay -l|grep '\[USB Audio\]'|grep -v 'M8 \[M8\]'|awk '{print $3;exit}')
+    alsaloop -P plughw:${USBOUT},0 -C hw:M8,0 -t 200000 -A 5 --rate 44100 --sync=1 -T -1 -d
+    sleep 1
+    USBIN=$(arecord -l|grep '\[USB Audio\]'|grep -v 'M8 \[M8\]'|awk '{print $3;exit}')
+    alsaloop -P hw:M8,0 -C hw:${USBIN},0 -t 200000 -A 5 --rate 44100 --sync=1 -T -1 -d
+    sleep 1
+    ./_m8c/m8c
+    pkill alsaloop
+else
+#ROCKNIX
+    M8=$(pactl list sources short 2>&1 | awk '/alsa_input\.usb-DirtyWave_M8/{print $1;exit}')
+    USBOUT=$(pactl list sinks short 2>&1 |grep 'alsa_output\.usb'|grep -v 'DirtyWave_M8'|awk '{print $1;exit}')
+    USBIN=$(pactl list sources short|grep 'alsa_input\.usb'|grep -v 'DirtyWave_M8'|awk '{print $1;exit}')
+    pactl set-default-source ${M8}
+    pactl set-default-sink ${USBOUT}
+    pactl load-module module-loopback source=${M8} sink=${USBOUT} latency_msec=200 format=s16le rate=44100 channels=2
+    sleep 2
+    pactl load-module module-loopback source=${USBIN} sink=${M8} latency_msec=200 format=s16le rate=44100 channels=2
+    sleep 2
+    ./_m8c/m8c
+    pactl unload-module module-loopback
+fi
