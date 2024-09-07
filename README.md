@@ -1,33 +1,31 @@
 # M8HeadlessWithDAC
 Dirtywave M8 Headless with game console (RG351, R36S etc...) scripts for use USB audio(aka DAC).
 
-**for "1M8ARK" archive on YouTube**
-[https://www.youtube.com/watch?v=tt95ZG6W8hM](https://www.youtube.com/watch?v=tt95ZG6W8hM)  
+# Install  
+*for M8 Version 4.0 on discord search '1M8ARK'*  
+https://github.com/miotislucifugis/m8c_arkOs_4.0
 Setup 1M8ARK m8c.  
-Or, If you wish build m8c from source, refer experimental/howto- text.  
+Or, If you wish build m8c from source, refer experimental/howto- text.
   
-Tested on ArkOS.  
+Tested on ArkOS and ROCKNIX.  
+  
+**Ver 2.0 ROCKNIX scripts are unified main scripts.**  
 
-Only M8_ROCKNIX.sh tested on ROCKNIX.  
   
 # Usage  
 Copy M8_USBDAC.sh to your m8c directory (one of /roms/ports/M8, /roms/1M8ARK, /roms2/ports/M8, /roms2/1M8ARK).  
-  
+
+Connect Teensy and run 'M8'.  
+
 |File|Description|
 |---|---|
+|M8.sh|standard M8 script.|  
+|M8RT.sh|low latency realtime version, sometime glitchy|  
 |M8_USBDAC.sh|output to USBDAC|  
-|M8_USBDAC_rev.sh|output to USBDAC, detection order reverse version.|  
-|specific/M8_USBDAC_CODEC.sh|If your USBDAC device named 'CODEC', this version is more stable.|  
 |M8_SPKOUT_USBIN.sh|output to game console speaker and "audio in" from USB audio interface.|  
 |M8_USBINOUT.sh|for audio interface in/out.|  
-|M8RT.sh|for MIDI recording, low latency, noisy, unstable.|  
 |showdevices.sh|show device ID (push button to exit).|  
   
-Early, specific directory versions are marged main M8USBDAC.sh.  
-Original 'power save' codes are commented out.  
-
-6/1/2024, Performance setting as default.  
-
 ---
   
 
