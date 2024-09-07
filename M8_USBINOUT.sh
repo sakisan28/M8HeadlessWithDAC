@@ -23,11 +23,11 @@ else
     M8OUT=$(pactl list sources short 2>&1 | awk '/alsa_input\.usb-DirtyWave_M8/{print $1;exit}')
     USBOUT=$(pactl list sinks short 2>&1 |grep 'alsa_output\.usb'|grep -v 'DirtyWave_M8'|awk '{print $1;exit}')
     USBIN=$(pactl list sources short|grep 'alsa_input\.usb'|grep -v 'DirtyWave_M8'|awk '{print $1;exit}')
-    pactl set-default-source ${M8}
+    pactl set-default-source ${M8OUT}
     pactl set-default-sink ${USBOUT}
-    pactl load-module module-loopback source=${M8OUT} sink=${USBOUT} latency_msec=200 format=s16le rate=44100 channels=2
+    pactl load-module module-loopback source=${M8OUT} sink=${USBOUT} latency_msec=200 format=s16le rate=44100 channels=2 source_dont_move=true sink_dont_move=true
     sleep 2
-    pactl load-module module-loopback source=${USBIN} sink=${M8IN} latency_msec=200 format=s16le rate=44100 channels=2
+    pactl load-module module-loopback source=${USBIN} sink=${M8IN} latency_msec=200 format=s16le rate=44100 channels=2 source_dont_move=true sink_dont_move=true
     sleep 2
     ./_m8c/m8c
     pactl unload-module module-loopback
