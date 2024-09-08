@@ -8,6 +8,8 @@ Setup 1M8ARK m8c.
 Or, If you wish build m8c from source, refer experimental/howto- text.
   
 Tested on ArkOS and ROCKNIX.  
+
+**On ROCKNIX, I recomend to use RK3566 machine.**  
   
 **Ver 2.0 ROCKNIX scripts are unified main scripts.**  
 
