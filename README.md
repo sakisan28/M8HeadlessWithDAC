@@ -85,7 +85,8 @@ befor run M8, run start_fluidsynth, then run M8 to go.
   
 alsaloop and some tools for ROCKNIX (test build)  
 experimental_m8_rocknix.zip  
-  
+
+Bluetooth MIDI support  
 Bluez MIDI support: sample script for rebuild Bluez with MIDI support.  
 Tested BLE MIDI decices:  
 Yamaha UD-BT01  
