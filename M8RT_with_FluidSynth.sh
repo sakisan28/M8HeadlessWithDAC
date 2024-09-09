@@ -10,7 +10,7 @@ if [ $? -eq 0 ]
 then
 #ArkOS
     fluidsynth -s -i -g 1.0 -a alsa -o audio.alsa.device=hw:M8,0 -m alsa_seq -g 1.0 /usr/share/sounds/sf3/default-GM.sf3 &
-    sleep 2
+    sleep 5
     m8=$(aconnect -i -l | awk '/M8/{ print substr($2,1,length($2)-1);exit }')
     fluid=$(aconnect -o -l | awk '/FLUID/{ print substr($2,1,length($2)-1);exit }')
     aconnect ${m8} ${fluid}
@@ -26,7 +26,7 @@ else
 #ROCKNIX
     M8=$(pactl list sources short 2>&1 | awk '/alsa_input\.usb-DirtyWave_M8/{print $1;exit}')
     fluidsynth -s -i -a pulseaudio -o audio.pulseaudio.device=${M8} -m alsa_seq -g 1.0 /usr/share/soundfonts/GeneralUser.sf2 &
-    sleep 2
+    sleep 5
     m8midi=$(aconnect -i -l | awk '/M8/{ print substr($2,1,length($2)-1);exit }')
     fluid=$(aconnect -o -l | awk '/FLUID/{ print substr($2,1,length($2)-1);exit }')
     aconnect ${m8midi} ${fluid}
