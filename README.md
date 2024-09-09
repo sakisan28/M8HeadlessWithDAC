@@ -81,6 +81,11 @@ Device number 3 (for Powkiddy RGB30)
 ---
 *Experimental*  
 fluidsynth: start fluidsynth(Soundfont) and synth output to M8 USB in.  You can use GM synth on M8's 'EXTERNAL' instrument or Mixer USB channel.   
+befor run M8, run start_fluidsynth, then run M8 to go.  
+  
+alsaloop and some tools for ROCKNIX (test build)  
+experimental_m8_rocknix.zip  
+  
 Bluez MIDI support: sample script for rebuild Bluez with MIDI support.  
 Tested BLE MIDI decices:  
 Yamaha UD-BT01  
