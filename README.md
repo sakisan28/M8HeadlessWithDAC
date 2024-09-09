@@ -71,7 +71,7 @@ If USB hardware default is not 44100, use plughw: instead of hw:
 alsaloop -P plughw:MC101,0 -C hw:M8,0 -t 200000 --rate 44100 -A 5 -T -1 -d  
   
 ---
-**Specific**  
+**Specific**  (**v2.0 obsolete**, for just  example)  
 Roland MC101  
 Roland T8  
 Device named 'CODEC'  
