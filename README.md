@@ -33,7 +33,7 @@ Connect Teensy and run 'M8'.
 |M8_USBDAC.sh|output to USBDAC|  
 |M8_SPKOUT_USBIN.sh|output to game console speaker and "audio in" from USB audio interface.|  
 |M8_USBINOUT.sh|for audio interface in/out.|  
-|showdevices.sh|show device ID (push button to exit).|  
+|M8RT_with_FluidSynth.sh|M8 with FluidSynth, Use M8 external instrument, you can use FluidSynth tones. Multi timbre support.|  
   
 ---
   
