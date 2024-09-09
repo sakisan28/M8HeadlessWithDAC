@@ -2,8 +2,11 @@
 Dirtywave M8 Headless with game console (RG351, R36S etc...) scripts for use USB audio(aka DAC).
 
 # Install  
-*for M8 Version 4.0 on discord search '1M8ARK'*  
-https://github.com/miotislucifugis/m8c_arkOs_4.0
+Install m8c archive called '1M8ARK'.  
+*for M8 Version 4.0 on discord search '1M8ARK'*   
+download link:  
+https://github.com/miotislucifugis/m8c_arkOs_4.0  
+  
 Setup 1M8ARK m8c.  
 Or, If you wish build m8c from source, refer experimental/howto- text.
   
@@ -15,10 +18,14 @@ Tested on ArkOS and ROCKNIX.
 
   
 # Usage  
-Copy M8_USBDAC.sh to your m8c directory (one of /roms/ports/M8, /roms/1M8ARK, /roms2/ports/M8, /roms2/1M8ARK).  
+ArkOS  
+Copy M8_USBDAC.sh or some .sh files to your m8c directory (one of /roms/ports/M8 (ports menu), /roms/1M8ARK (run by filemanager or edit es_systems), /roms/tools (Options-Tools menu). You can also use roms2.
 
+ROCKNIX  
+Copy M8_USBDAC.sh or some .sh files to /storage/roms/ports/M8.  
+  
 Connect Teensy and run 'M8'.  
-
+  
 |File|Description|
 |---|---|
 |M8.sh|standard M8 script.|  
